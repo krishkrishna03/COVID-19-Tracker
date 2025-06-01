@@ -1,0 +1,149 @@
+:root {
+  /* Updated color palette with more vibrant options */
+  --color-primary: #2563eb;
+  --color-primary-light: #3b82f6;
+  --color-primary-dark: #1d4ed8;
+  --color-secondary: #06b6d4;
+  --color-secondary-light: #22d3ee;
+  --color-secondary-dark: #0891b2;
+  --color-accent: #e11d48;
+  --color-accent-light: #f43f5e;
+  --color-accent-dark: #be123c;
+  --color-success: #059669;
+  --color-success-light: #10b981;
+  --color-success-dark: #047857;
+  --color-warning: #eab308;
+  --color-warning-light: #facc15;
+  --color-warning-dark: #ca8a04;
+  --color-error: #dc2626;
+  --color-error-light: #ef4444;
+  --color-error-dark: #b91c1c;
+  
+  /* Chart colors */
+  --chart-color-1: #2563eb;
+  --chart-color-2: #e11d48;
+  --chart-color-3: #059669;
+  --chart-color-4: #eab308;
+  --chart-color-5: #06b6d4;
+  --chart-color-6: #8b5cf6;
+  --chart-color-7: #f97316;
+  --chart-color-8: #14b8a6;
+  --chart-color-9: #ec4899;
+  --chart-color-10: #84cc16;
+  
+  /* Neutral colors */
+  --color-neutral-50: #F8FAFC;
+  --color-neutral-100: #F1F5F9;
+  --color-neutral-200: #E2E8F0;
+  --color-neutral-300: #CBD5E1;
+  --color-neutral-400: #94A3B8;
+  --color-neutral-500: #64748B;
+  --color-neutral-600: #475569;
+  --color-neutral-700: #334155;
+  --color-neutral-800: #1E293B;
+  --color-neutral-900: #0F172A;
+  
+  --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  --spacing-1: 4px;
+  --spacing-2: 8px;
+  --spacing-3: 16px;
+  --spacing-4: 24px;
+  --spacing-5: 32px;
+  --spacing-6: 40px;
+  --spacing-7: 48px;
+  --spacing-8: 64px;
+  
+  --transition-speed: 0.3s;
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 16px;
+  --box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--color-neutral-100);
+  color: var(--color-neutral-800);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.dark-mode {
+  --color-neutral-50: #1E293B;
+  --color-neutral-100: #0F172A;
+  --color-neutral-200: #1E293B;
+  --color-neutral-300: #334155;
+  --color-neutral-400: #475569;
+  --color-neutral-500: #64748B;
+  --color-neutral-600: #94A3B8;
+  --color-neutral-700: #CBD5E1;
+  --color-neutral-800: #E2E8F0;
+  --color-neutral-900: #F8FAFC;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-2) var(--spacing-3);
+  transition: background-color var(--transition-speed), transform var(--transition-speed);
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-3);
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 var(--spacing-2);
+  }
+}
+
+.card {
+  background-color: white;
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--box-shadow);
+  padding: var(--spacing-4);
+  margin-bottom: var(--spacing-4);
+  transition: transform var(--transition-speed);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.dark-mode .card {
+  background-color: var(--color-neutral-800);
+  color: var(--color-neutral-100);
+}
+
+.leaflet-container {
+  height: 500px;
+  border-radius: var(--border-radius-md);
+  z-index: 1;
+}

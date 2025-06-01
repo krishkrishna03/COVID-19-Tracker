@@ -1,0 +1,23 @@
+.country-selector {
+  width: 250px;
+  z-index: 2;
+}
+
+.country-option {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+.country-flag {
+  width: 20px;
+  height: auto;
+  border-radius: 2px;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .country-selector {
+    width: 100%;
+  }
+}
