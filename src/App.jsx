@@ -77,6 +77,7 @@ function App() {
   return (
     <div className={`app ${darkMode ? 'dark-mode' : ''}`}>
       <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+      <div style={{ marginTop: '2rem' }} />
       <div className="container">
         <div className="app__top">
           <GlobalStats data={globalData} />
